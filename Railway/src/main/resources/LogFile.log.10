@@ -1,0 +1,81 @@
+2019-09-04 13:07:42 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity com.railway.model.avaliable_seats: select avaliable_0_.traininfonumber as traininf3_0_0_, avaliable_0_.Avaliable_AC as Avaliabl1_0_0_, avaliable_0_.Avaliable_sleeper as Avaliabl2_0_0_ from avaliable_seats avaliable_0_ where avaliable_0_.traininfonumber=?
+2019-09-04 13:07:42 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity com.railway.model.avaliable_seats: select avaliable_0_.traininfonumber as traininf3_0_0_, avaliable_0_.Avaliable_AC as Avaliabl1_0_0_, avaliable_0_.Avaliable_sleeper as Avaliabl2_0_0_ from avaliable_seats avaliable_0_ where avaliable_0_.traininfonumber=?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:3791 - Static SQL for entity: com.railway.model.passenger
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:3796 -  Version select: select pnr_no from passenger where pnr_no =?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:3799 -  Snapshot select: select passenger_.pnr_no, passenger_.age as age2_1_, passenger_.gender as gender3_1_, passenger_.name as name4_1_, passenger_.seat_no as seat_no5_1_, passenger_.ticket_no as ticket_n7_1_, passenger_.travel_class as travel_c6_1_ from passenger passenger_ where passenger_.pnr_no=?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into passenger (age, gender, name, seat_no, ticket_no, travel_class, pnr_no) values (?, ?, ?, ?, ?, ?, ?)
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:394 -  Update 0: update passenger set age=?, gender=?, name=?, seat_no=?, ticket_no=?, travel_class=? where pnr_no=?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from passenger where pnr_no=?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:3807 -  Identity insert: insert into passenger (age, gender, name, seat_no, ticket_no, travel_class) values (?, ?, ?, ?, ?, ?)
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3a8bdb86]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : age
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : gender
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : seat_no
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7b40cf1a]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.cancle_id
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.fare
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.passenger
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : tickets.passenger
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@67770259]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.arrival_date
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.departure_date
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.tickets
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : tickets.train_info.tickets
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.trains
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@33f4de4c]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.avaliable_seats
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@38fdac5e]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4>-id -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@674714d2]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.user_id
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : train_info
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@7e355426]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@4ce0e9ce]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : travel_class
+2019-09-04 13:07:42 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-09-04 13:07:42 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-09-04 13:07:42 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.railway.model.passenger)
+    - Returns
+       - EntityReturnImpl(entity=com.railway.model.passenger, querySpaceUid=<gen:0>, path=com.railway.model.passenger)
+          - EntityAttributeFetchImpl(entity=com.railway.model.tickets, querySpaceUid=<gen:1>, path=com.railway.model.passenger.tickets)
+             - EntityAttributeFetchImpl(entity=com.railway.model.train_info, querySpaceUid=<gen:2>, path=com.railway.model.passenger.tickets.train_info)
+                - EntityAttributeFetchImpl(entity=com.railway.model.trains, querySpaceUid=<gen:3>, path=com.railway.model.passenger.tickets.train_info.trains)
+                - EntityAttributeFetchImpl(entity=com.railway.model.avaliable_seats, querySpaceUid=<gen:4>, path=com.railway.model.passenger.tickets.train_info.avaliable_seats)
+          - CollectionAttributeFetchImpl(collection=com.railway.model.passenger.train_info, querySpaceUid=<gen:5>, path=com.railway.model.passenger.train_info)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.railway.model.train_info, querySpaceUid=<gen:6>, path=com.railway.model.passenger.train_info.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.railway.model.passenger)
+          - SQL table alias mapping - passenger0_
+          - alias suffix - 0_
+          - suffixed key columns - {pnr_no1_1_0_}
+          - JOIN (JoinDefinedByMetadata(tickets)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.railway.model.tickets)
+                - SQL table alias mapping - tickets1_
+                - alias suffix - 1_
+                - suffixed key columns - {ticket_n1_2_1_}
+                - JOIN (JoinDefinedByMetadata(train_info)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=com.railway.model.train_info)
+                      - SQL table alias mapping - train_info2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {traininf1_3_2_}
+
+2019-09-04 13:07:42 DEBUG EntityLoader:137 - Static select for entity com.railway.model.passenger [NONE]: select passenger0_.pnr_no as pnr_no1_1_0_, passenger0_.age as age2_1_0_, passenger0_.gender as gender3_1_0_, passenger0_.name as name4_1_0_, passenger0_.seat_no as seat_no5_1_0_, passenger0_.ticket_no as ticket_n7_1_0_, passenger0_.travel_class as travel_c6_1_0_, tickets1_.ticket_no as ticket_n1_2_1_, tickets1_.cancle_id as cancle_i2_2_1_, tickets1_.fare as fare3_2_1_, tickets1_.traininfonumber as traininf5_2_1_, tickets1_.user_id as user_id4_2_1_, train_info2_.traininfonumber as traininf1_3_2_, train_info2_.arrival_date as arrival_2_3_2_, train_info2_.departure_date as departur3_3_2_, train_info2_.train_no as train_no4_3_2_ from passenger passenger0_ left outer join tickets tickets1_ on passenger0_.ticket_no=tickets1_.ticket_no left outer join train_info train_info2_ on tickets1_.traininfonumber=train_info2_.traininfonumber where passenger0_.pnr_no=?
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@16b07335]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : age
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : gender
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : name
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : seat_no
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@352258fe]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.cancle_id
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.fare
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.passenger
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : tickets.passenger
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@14a61f9f]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.arrival_date
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.departure_date
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets.train_info.tickets
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : tickets.train_info.tickets

@@ -1,0 +1,63 @@
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:145 - Resolving associations for [com.railway.model.train_info#127070809]
+2019-09-04 13:07:43 DEBUG SQL:94 - select avaliable_0_.traininfonumber as traininf3_0_0_, avaliable_0_.Avaliable_AC as Avaliabl1_0_0_, avaliable_0_.Avaliable_sleeper as Avaliabl2_0_0_ from avaliable_seats avaliable_0_ where avaliable_0_.traininfonumber=?
+2019-09-04 13:07:43 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2019-09-04 13:07:43 DEBUG EntityReferenceInitializerImpl:126 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:145 - Resolving associations for [com.railway.model.avaliable_seats#component[traininfonumber]{traininfonumber=com.railway.model.train_info#127070809}]
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:288 - Done materializing entity [com.railway.model.avaliable_seats#component[traininfonumber]{traininfonumber=com.railway.model.train_info#127070809}]
+2019-09-04 13:07:43 DEBUG ResourceRegistryStandardImpl:87 - HHH000387: ResultSet's statement was not registered
+2019-09-04 13:07:43 DEBUG AbstractLoadPlanBasedEntityLoader:219 - Done entity load : com.railway.model.avaliable_seats#com.railway.model.avaliable_seats@7d8e4f54
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:288 - Done materializing entity [com.railway.model.train_info#127070809]
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:141 - Processing flush-time cascades
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:193 - Dirty checking collections
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.trains.train_info#12285], was: [com.railway.model.trains.train_info#12285] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.trains.train_info#12707], was: [com.railway.model.trains.train_info#12707] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.trains.train_info#12723], was: [com.railway.model.trains.train_info#12723] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.train_info.tickets#122850809], was: [com.railway.model.train_info.tickets#122850809] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.train_info.tickets#127070809], was: [com.railway.model.train_info.tickets#127070809] (uninitialized)
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:115 - Flushed: 0 insertions, 0 updates, 0 deletions to 7 objects
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:122 - Flushed: 0 (re)creations, 0 updates, 0 removals to 5 collections
+2019-09-04 13:07:43 DEBUG EntityPrinter:110 - Listing entities:
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.trains{distance=1600, train_name=NZM DURONTO EXPRESS, train_no=12285, train_info=<uninitialized>, destination=Delhi, source=hydreabad, total_Seats_sleeper=160, total_seats_Ac=60}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.avaliable_seats{Avaliable_AC=26, Avaliable_sleeper=112}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.avaliable_seats{Avaliable_AC=6, Avaliable_sleeper=27}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.train_info{tickets=<uninitialized>, departure_date=2019-09-08, traininfonumber=122850809, arrival_date=2019-09-09, trains=com.railway.model.trains#12285, avaliable_seats=com.railway.model.avaliable_seats}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.train_info{tickets=<uninitialized>, departure_date=2019-09-08, traininfonumber=127070809, arrival_date=2019-09-09, trains=com.railway.model.trains#12707, avaliable_seats=com.railway.model.avaliable_seats}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.trains{distance=1600, train_name=RAJDHANI EXPRESS, train_no=12707, train_info=<uninitialized>, destination=Delhi, source=hydreabad, total_Seats_sleeper=160, total_seats_Ac=60}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.trains{distance=1600, train_name=TELANGANA EXPRESS, train_no=12723, train_info=<uninitialized>, destination=Delhi, source=hydreabad, total_Seats_sleeper=160, total_seats_Ac=60}
+2019-09-04 13:07:43 DEBUG SQL:94 - select train_info0_.traininfonumber as traininf1_3_, train_info0_.arrival_date as arrival_2_3_, train_info0_.departure_date as departur3_3_, train_info0_.train_no as train_no4_3_ from train_info train_info0_ where train_info0_.train_no=? and train_info0_.departure_date=?
+2019-09-04 13:07:43 DEBUG Loader:384 - Result set row: 0
+2019-09-04 13:07:43 DEBUG Loader:1538 - Result row: EntityKey[com.railway.model.train_info#127230809]
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:145 - Resolving associations for [com.railway.model.train_info#127230809]
+2019-09-04 13:07:43 DEBUG SQL:94 - select avaliable_0_.traininfonumber as traininf3_0_0_, avaliable_0_.Avaliable_AC as Avaliabl1_0_0_, avaliable_0_.Avaliable_sleeper as Avaliabl2_0_0_ from avaliable_seats avaliable_0_ where avaliable_0_.traininfonumber=?
+2019-09-04 13:07:43 DEBUG ResultSetProcessorImpl:120 - Starting ResultSet row #0
+2019-09-04 13:07:43 DEBUG EntityReferenceInitializerImpl:126 - On call to EntityIdentifierReaderImpl#resolve, EntityKey was already known; should only happen on root returns with an optional identifier specified
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:145 - Resolving associations for [com.railway.model.avaliable_seats#component[traininfonumber]{traininfonumber=com.railway.model.train_info#127230809}]
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:288 - Done materializing entity [com.railway.model.avaliable_seats#component[traininfonumber]{traininfonumber=com.railway.model.train_info#127230809}]
+2019-09-04 13:07:43 DEBUG ResourceRegistryStandardImpl:87 - HHH000387: ResultSet's statement was not registered
+2019-09-04 13:07:43 DEBUG AbstractLoadPlanBasedEntityLoader:219 - Done entity load : com.railway.model.avaliable_seats#com.railway.model.avaliable_seats@79da4a8d
+2019-09-04 13:07:43 DEBUG TwoPhaseLoad:288 - Done materializing entity [com.railway.model.train_info#127230809]
+2019-09-04 13:07:43 DEBUG TransactionImpl:101 - committing
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:141 - Processing flush-time cascades
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:193 - Dirty checking collections
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.trains.train_info#12285], was: [com.railway.model.trains.train_info#12285] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.trains.train_info#12707], was: [com.railway.model.trains.train_info#12707] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.trains.train_info#12723], was: [com.railway.model.trains.train_info#12723] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.train_info.tickets#122850809], was: [com.railway.model.train_info.tickets#122850809] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.train_info.tickets#127070809], was: [com.railway.model.train_info.tickets#127070809] (uninitialized)
+2019-09-04 13:07:43 DEBUG Collections:207 - Collection found: [com.railway.model.train_info.tickets#127230809], was: [com.railway.model.train_info.tickets#127230809] (uninitialized)
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:115 - Flushed: 0 insertions, 0 updates, 0 deletions to 9 objects
+2019-09-04 13:07:43 DEBUG AbstractFlushingEventListener:122 - Flushed: 0 (re)creations, 0 updates, 0 removals to 6 collections
+2019-09-04 13:07:43 DEBUG EntityPrinter:110 - Listing entities:
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.trains{distance=1600, train_name=NZM DURONTO EXPRESS, train_no=12285, train_info=<uninitialized>, destination=Delhi, source=hydreabad, total_Seats_sleeper=160, total_seats_Ac=60}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.avaliable_seats{Avaliable_AC=26, Avaliable_sleeper=112}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.avaliable_seats{Avaliable_AC=6, Avaliable_sleeper=27}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.train_info{tickets=<uninitialized>, departure_date=2019-09-08, traininfonumber=127230809, arrival_date=2019-09-09, trains=com.railway.model.trains#12723, avaliable_seats=com.railway.model.avaliable_seats}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.train_info{tickets=<uninitialized>, departure_date=2019-09-08, traininfonumber=122850809, arrival_date=2019-09-09, trains=com.railway.model.trains#12285, avaliable_seats=com.railway.model.avaliable_seats}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.train_info{tickets=<uninitialized>, departure_date=2019-09-08, traininfonumber=127070809, arrival_date=2019-09-09, trains=com.railway.model.trains#12707, avaliable_seats=com.railway.model.avaliable_seats}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.trains{distance=1600, train_name=RAJDHANI EXPRESS, train_no=12707, train_info=<uninitialized>, destination=Delhi, source=hydreabad, total_Seats_sleeper=160, total_seats_Ac=60}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.trains{distance=1600, train_name=TELANGANA EXPRESS, train_no=12723, train_info=<uninitialized>, destination=Delhi, source=hydreabad, total_Seats_sleeper=160, total_seats_Ac=60}
+2019-09-04 13:07:43 DEBUG EntityPrinter:117 - com.railway.model.avaliable_seats{Avaliable_AC=26, Avaliable_sleeper=118}
+2019-09-04 13:07:43 DEBUG LogicalConnectionManagedImpl:161 - Initiating JDBC connection release from afterTransaction
+2019-09-04 13:07:43 DEBUG LogicalConnectionManagedImpl:161 - Initiating JDBC connection release from afterTransaction
+2019-09-04 13:07:43 INFO  SearchTrain:31 - trains list fetched [com.railway.helper.TrainsHelper@298d79f3, com.railway.helper.TrainsHelper@1c2bb606, com.railway.helper.TrainsHelper@6d6e70eb]
+2019-09-04 13:08:09 DEBUG DriverManagerConnectionProviderImpl:249 - Connection pool now considered primed; min-size will be maintained

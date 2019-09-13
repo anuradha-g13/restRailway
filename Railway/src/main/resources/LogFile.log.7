@@ -1,0 +1,59 @@
+2019-09-04 13:07:42 DEBUG EntityLoader:137 - Static select for entity com.railway.model.tickets [READ]: select tickets0_.ticket_no as ticket_n1_2_0_, tickets0_.cancle_id as cancle_i2_2_0_, tickets0_.fare as fare3_2_0_, tickets0_.traininfonumber as traininf5_2_0_, tickets0_.user_id as user_id4_2_0_, train_info1_.traininfonumber as traininf1_3_1_, train_info1_.arrival_date as arrival_2_3_1_, train_info1_.departure_date as departur3_3_1_, train_info1_.train_no as train_no4_3_1_, trains2_.train_no as train_no1_4_2_, trains2_.destination as destinat2_4_2_, trains2_.distance as distance3_4_2_, trains2_.source as source4_4_2_, trains2_.total_Seats_sleeper as total_Se5_4_2_, trains2_.total_seats_Ac as total_se6_4_2_, trains2_.train_name as train_na7_4_2_, avaliable_3_.traininfonumber as traininf3_0_3_, avaliable_3_.Avaliable_AC as Avaliabl1_0_3_, avaliable_3_.Avaliable_sleeper as Avaliabl2_0_3_ from tickets tickets0_ left outer join train_info train_info1_ on tickets0_.traininfonumber=train_info1_.traininfonumber left outer join trains trains2_ on train_info1_.train_no=trains2_.train_no left outer join avaliable_seats avaliable_3_ on train_info1_.traininfonumber=avaliable_3_.traininfonumber where tickets0_.ticket_no=?
+2019-09-04 13:07:42 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity com.railway.model.tickets: select tickets0_.ticket_no as ticket_n1_2_1_, tickets0_.cancle_id as cancle_i2_2_1_, tickets0_.fare as fare3_2_1_, tickets0_.traininfonumber as traininf5_2_1_, tickets0_.user_id as user_id4_2_1_, passenger1_.ticket_no as ticket_n7_1_3_, passenger1_.pnr_no as pnr_no1_1_3_, passenger1_.pnr_no as pnr_no1_1_0_, passenger1_.age as age2_1_0_, passenger1_.gender as gender3_1_0_, passenger1_.name as name4_1_0_, passenger1_.seat_no as seat_no5_1_0_, passenger1_.ticket_no as ticket_n7_1_0_, passenger1_.travel_class as travel_c6_1_0_ from tickets tickets0_ left outer join passenger passenger1_ on tickets0_.ticket_no=passenger1_.ticket_no where tickets0_.ticket_no=?
+2019-09-04 13:07:42 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity com.railway.model.tickets: select tickets0_.ticket_no as ticket_n1_2_1_, tickets0_.cancle_id as cancle_i2_2_1_, tickets0_.fare as fare3_2_1_, tickets0_.traininfonumber as traininf5_2_1_, tickets0_.user_id as user_id4_2_1_, passenger1_.ticket_no as ticket_n7_1_3_, passenger1_.pnr_no as pnr_no1_1_3_, passenger1_.pnr_no as pnr_no1_1_0_, passenger1_.age as age2_1_0_, passenger1_.gender as gender3_1_0_, passenger1_.name as name4_1_0_, passenger1_.seat_no as seat_no5_1_0_, passenger1_.ticket_no as ticket_n7_1_0_, passenger1_.travel_class as travel_c6_1_0_ from tickets tickets0_ left outer join passenger passenger1_ on tickets0_.ticket_no=passenger1_.ticket_no where tickets0_.ticket_no=?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:3791 - Static SQL for entity: com.railway.model.trains
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:3796 -  Version select: select train_no from trains where train_no =?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:3799 -  Snapshot select: select trains_.train_no, trains_.destination as destinat2_4_, trains_.distance as distance3_4_, trains_.source as source4_4_, trains_.total_Seats_sleeper as total_Se5_4_, trains_.total_seats_Ac as total_se6_4_, trains_.train_name as train_na7_4_ from trains trains_ where trains_.train_no=?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into trains (destination, distance, source, total_Seats_sleeper, total_seats_Ac, train_name, train_no) values (?, ?, ?, ?, ?, ?, ?)
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:394 -  Update 0: update trains set destination=?, distance=?, source=?, total_Seats_sleeper=?, total_seats_Ac=?, train_name=? where train_no=?
+2019-09-04 13:07:42 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from trains where train_no=?
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6303c32b]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : destination
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : distance
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : source
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : total_Seats_sleeper
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : total_seats_Ac
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : train_info
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@2d9173f1]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@41975cc9]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : train_name
+2019-09-04 13:07:42 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-09-04 13:07:42 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-09-04 13:07:42 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.railway.model.trains)
+    - Returns
+       - EntityReturnImpl(entity=com.railway.model.trains, querySpaceUid=<gen:0>, path=com.railway.model.trains)
+          - CollectionAttributeFetchImpl(collection=com.railway.model.trains.train_info, querySpaceUid=<gen:1>, path=com.railway.model.trains.train_info)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.railway.model.train_info, querySpaceUid=<gen:2>, path=com.railway.model.trains.train_info.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.railway.model.trains)
+          - SQL table alias mapping - trains0_
+          - alias suffix - 0_
+          - suffixed key columns - {train_no1_4_0_}
+
+2019-09-04 13:07:42 DEBUG EntityLoader:137 - Static select for entity com.railway.model.trains [NONE]: select trains0_.train_no as train_no1_4_0_, trains0_.destination as destinat2_4_0_, trains0_.distance as distance3_4_0_, trains0_.source as source4_4_0_, trains0_.total_Seats_sleeper as total_Se5_4_0_, trains0_.total_seats_Ac as total_se6_4_0_, trains0_.train_name as train_na7_4_0_ from trains trains0_ where trains0_.train_no=?
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3cf0c54b]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : destination
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : distance
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : source
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : total_Seats_sleeper
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : total_seats_Ac
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : train_info
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@c2cf447]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7726801f]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : train_name
+2019-09-04 13:07:42 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-09-04 13:07:42 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-09-04 13:07:42 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=com.railway.model.trains)
+    - Returns
+       - EntityReturnImpl(entity=com.railway.model.trains, querySpaceUid=<gen:0>, path=com.railway.model.trains)
+          - CollectionAttributeFetchImpl(collection=com.railway.model.trains.train_info, querySpaceUid=<gen:1>, path=com.railway.model.trains.train_info)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=com.railway.model.train_info, querySpaceUid=<gen:2>, path=com.railway.model.trains.train_info.<elements>)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=com.railway.model.trains)
+          - SQL table alias mapping - trains0_
+          - alias suffix - 0_
+          - suffixed key columns - {train_no1_4_0_}
+
+2019-09-04 13:07:42 DEBUG EntityLoader:137 - Static select for entity com.railway.model.trains [READ]: select trains0_.train_no as train_no1_4_0_, trains0_.destination as destinat2_4_0_, trains0_.distance as distance3_4_0_, trains0_.source as source4_4_0_, trains0_.total_Seats_sleeper as total_Se5_4_0_, trains0_.total_seats_Ac as total_se6_4_0_, trains0_.train_name as train_na7_4_0_ from trains trains0_ where trains0_.train_no=?
+2019-09-04 13:07:42 DEBUG Loader:38 - Static select for action ACTION_MERGE on entity com.railway.model.trains: select trains0_.train_no as train_no1_4_1_, trains0_.destination as destinat2_4_1_, trains0_.distance as distance3_4_1_, trains0_.source as source4_4_1_, trains0_.total_Seats_sleeper as total_Se5_4_1_, trains0_.total_seats_Ac as total_se6_4_1_, trains0_.train_name as train_na7_4_1_, train_info1_.train_no as train_no4_3_3_, train_info1_.traininfonumber as traininf1_3_3_, train_info1_.traininfonumber as traininf1_3_0_, train_info1_.arrival_date as arrival_2_3_0_, train_info1_.departure_date as departur3_3_0_, train_info1_.train_no as train_no4_3_0_ from trains trains0_ left outer join train_info train_info1_ on trains0_.train_no=train_info1_.train_no where trains0_.train_no=?
+2019-09-04 13:07:42 DEBUG Loader:38 - Static select for action ACTION_REFRESH on entity com.railway.model.trains: select trains0_.train_no as train_no1_4_1_, trains0_.destination as destinat2_4_1_, trains0_.distance as distance3_4_1_, trains0_.source as source4_4_1_, trains0_.total_Seats_sleeper as total_Se5_4_1_, trains0_.total_seats_Ac as total_se6_4_1_, trains0_.train_name as train_na7_4_1_, train_info1_.train_no as train_no4_3_3_, train_info1_.traininfonumber as traininf1_3_3_, train_info1_.traininfonumber as traininf1_3_0_, train_info1_.arrival_date as arrival_2_3_0_, train_info1_.departure_date as departur3_3_0_, train_info1_.train_no as train_no4_3_0_ from trains trains0_ left outer join train_info train_info1_ on trains0_.train_no=train_info1_.train_no where trains0_.train_no=?

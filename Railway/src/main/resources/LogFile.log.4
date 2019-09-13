@@ -1,0 +1,88 @@
+2019-09-04 13:07:42 DEBUG CollectionLoader:83 - Static select for collection com.railway.model.trains.train_info: select train_info0_.train_no as train_no4_3_0_, train_info0_.traininfonumber as traininf1_3_0_, train_info0_.traininfonumber as traininf1_3_1_, train_info0_.arrival_date as arrival_2_3_1_, train_info0_.departure_date as departur3_3_1_, train_info0_.train_no as train_no4_3_1_, avaliable_1_.traininfonumber as traininf3_0_2_, avaliable_1_.Avaliable_AC as Avaliabl1_0_2_, avaliable_1_.Avaliable_sleeper as Avaliabl2_0_2_ from train_info train_info0_ left outer join avaliable_seats avaliable_1_ on train_info0_.traininfonumber=avaliable_1_.traininfonumber where train_info0_.train_no=?
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@5f0c74e7]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@5a49cfb1]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : cancle_id
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : fare
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : passenger
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1fba43c8]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@b1a33c9]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : train_info
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : train_info
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : user_id
+2019-09-04 13:07:42 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-09-04 13:07:42 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-09-04 13:07:42 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=com.railway.model.train_info.tickets)
+    - Returns
+       - CollectionReturnImpl(collection=com.railway.model.train_info.tickets, querySpaceUid=<gen:0>, path=[com.railway.model.train_info.tickets])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.railway.model.tickets, querySpaceUid=<gen:1>, path=[com.railway.model.train_info.tickets].<elements>)
+             - CollectionAttributeFetchImpl(collection=com.railway.model.tickets.passenger, querySpaceUid=<gen:2>, path=[com.railway.model.train_info.tickets].<elements>.passenger)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.railway.model.passenger, querySpaceUid=<gen:3>, path=[com.railway.model.train_info.tickets].<elements>.passenger.<elements>)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.railway.model.train_info.tickets)
+          - SQL table alias mapping - tickets0_
+          - alias suffix - 0_
+          - suffixed key columns - {traininf5_2_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - ticket_n1_2_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.railway.model.tickets)
+                - SQL table alias mapping - tickets0_
+                - alias suffix - 1_
+                - suffixed key columns - {ticket_n1_2_1_}
+
+2019-09-04 13:07:42 DEBUG CollectionLoader:83 - Static select for collection com.railway.model.train_info.tickets: select tickets0_.traininfonumber as traininf5_2_0_, tickets0_.ticket_no as ticket_n1_2_0_, tickets0_.ticket_no as ticket_n1_2_1_, tickets0_.cancle_id as cancle_i2_2_1_, tickets0_.fare as fare3_2_1_, tickets0_.traininfonumber as traininf5_2_1_, tickets0_.user_id as user_id4_2_1_ from tickets tickets0_ where tickets0_.traininfonumber=?
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@d17c3c8]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@43f4ff7c]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : arrival_date
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : departure_date
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : tickets
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@67792e6b]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@39222e7]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : trains
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : trains
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : avaliable_seats
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@67ed2144]
+2019-09-04 13:07:42 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4>-id -> org.hibernate.loader.plan.build.internal.spaces.CompositeQuerySpaceImpl@2e9265ef]
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : avaliable_seats.traininfonumber
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : avaliable_seats.traininfonumber
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : avaliable_seats.Avaliable_AC
+2019-09-04 13:07:42 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : avaliable_seats.Avaliable_sleeper
+2019-09-04 13:07:42 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:150 - Building LoadPlan...
+2019-09-04 13:07:42 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2019-09-04 13:07:42 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=com.railway.model.passenger.train_info)
+    - Returns
+       - CollectionReturnImpl(collection=com.railway.model.passenger.train_info, querySpaceUid=<gen:0>, path=[com.railway.model.passenger.train_info])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=com.railway.model.train_info, querySpaceUid=<gen:1>, path=[com.railway.model.passenger.train_info].<elements>)
+             - CollectionAttributeFetchImpl(collection=com.railway.model.train_info.tickets, querySpaceUid=<gen:2>, path=[com.railway.model.passenger.train_info].<elements>.tickets)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=com.railway.model.tickets, querySpaceUid=<gen:3>, path=[com.railway.model.passenger.train_info].<elements>.tickets.<elements>)
+             - EntityAttributeFetchImpl(entity=com.railway.model.avaliable_seats, querySpaceUid=<gen:4>, path=[com.railway.model.passenger.train_info].<elements>.avaliable_seats)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=com.railway.model.passenger.train_info)
+          - SQL table alias mapping - train_info0_
+          - alias suffix - 0_
+          - suffixed key columns - {train_no4_3_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - traininf1_3_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=com.railway.model.train_info)
+                - SQL table alias mapping - train_info0_
+                - alias suffix - 1_
+                - suffixed key columns - {traininf1_3_1_}
+                - JOIN (JoinDefinedByMetadata(avaliable_seats)) : <gen:1> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=com.railway.model.avaliable_seats)
+                      - SQL table alias mapping - avaliable_1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {traininf3_0_2_}
+                      - JOIN (JoinDefinedByMetadata(id)) : <gen:4> -> <gen:4>-id
+                         - CompositeQuerySpaceImpl(uid=<gen:4>-id)
+                            - SQL table alias mapping - avaliable_1_
+
+2019-09-04 13:07:42 DEBUG CollectionLoader:83 - Static select for collection com.railway.model.passenger.train_info: select train_info0_.train_no as train_no4_3_0_, train_info0_.traininfonumber as traininf1_3_0_, train_info0_.traininfonumber as traininf1_3_1_, train_info0_.arrival_date as arrival_2_3_1_, train_info0_.departure_date as departur3_3_1_, train_info0_.train_no as train_no4_3_1_, avaliable_1_.traininfonumber as traininf3_0_2_, avaliable_1_.Avaliable_AC as Avaliabl1_0_2_, avaliable_1_.Avaliable_sleeper as Avaliabl2_0_2_ from train_info train_info0_ left outer join avaliable_seats avaliable_1_ on train_info0_.traininfonumber=avaliable_1_.traininfonumber where train_info0_.train_no=?
+2019-09-04 13:07:42 DEBUG SchemaManagementToolCoordinator:57 - No actions specified; doing nothing
+2019-09-04 13:07:42 DEBUG JtaPlatformInitiator:43 - No JtaPlatform was specified, checking resolver
+2019-09-04 13:07:42 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2019-09-04 13:07:42 DEBUG StandardJtaPlatformResolver:137 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-09-04 13:07:42 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2019-09-04 13:07:42 DEBUG NamedQueryRepository:151 - Checking 0 named HQL queries
+2019-09-04 13:07:42 DEBUG NamedQueryRepository:167 - Checking 0 named SQL queries
+2019-09-04 13:07:42 DEBUG SessionFactoryRegistry:52 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@314ad838
